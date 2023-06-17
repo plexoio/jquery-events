@@ -15,11 +15,26 @@
 */
 
 /** Event listeners:
+ * 
  * mouseenter(function(){//effects})
  * mouseleave(function(){//effects})
  * hover(function(){//effects})
  * click(function(){//effects})
  * load(function(){//effects})  for images, iframes, and other elements loaded from external sources
+ * 
+ */
+
+/** Methods:
+ * 
+ * removeClass('class_name') // remove element class
+ * addClass('class_name') // add element class
+ * html() // to show or add html
+ * css() // to show or add inline css
+ * 
+ */
+
+/**
+ * $(document).ready(function () { // add code here }); // run after DOM is loaded
  */
 
 $(document).ready(function () {
