@@ -39,36 +39,137 @@
 
 $(document).ready(function () {
 
+     // STREAM 1
      $('.stream1 .card_para').hide('slow');
-     $(".show1").click(function () { // does the same as .on('click', function() {}); call-back
+     $(".show1").click(function (event) { // does the same as .on('click', function() {}); call-back
+          event.preventDefault();
+          $('.stream1').slideDown('slow').addClass('highlight_stream'); // chaining
+          $('.stream2 .card_para').fadeOut('slow');
+          $('.stream3 .card_para').fadeOut('slow');
+          $('.stream4 .card_para').fadeOut('slow');
+          $('.stream5 .card_para').fadeOut('slow');
+          $('.stream6 .card_para').fadeOut('slow');
+
           $('.stream1 .card_para').toggle('slow');
-          $(".stream1").removeClass('highlight_stream');
+
+          $('.stream2').fadeTo(1000, 0.5);
+          $('.stream3').fadeTo(1000, 0.5);
+          $('.stream4').fadeTo(1000, 0.5);
+          $('.stream5').fadeTo(1000, 0.5);
+          $('.stream6').fadeTo(1000, 0.5);
+          
           $(".stream2").removeClass('highlight_stream');
           $(".stream3").removeClass('highlight_stream');
-          $(".stream1").addClass('highlight_stream');
-     }).mouseleave(function () { // start chaining
-          $(".stream1").removeClass('highlight_stream');
+          $(".stream4").removeClass('highlight_stream');
+          $(".stream5").removeClass('highlight_stream');
+          $(".stream6").removeClass('highlight_stream');
+          
      });
 
+     // STREAM 2
      $('.stream2 .card_para').hide('slow');
-     $(".show2").click(function () {
+     $(".show2").click(function (event) {
+          event.preventDefault();
+          $('.stream2').fadeTo(1000, 1);
+          $('.stream1 .card_para').fadeOut('slow');
+          $('.stream3 .card_para').fadeOut('slow');
+          $('.stream4 .card_para').fadeOut('slow');
+          $('.stream5 .card_para').fadeOut('slow');
+          $('.stream6 .card_para').fadeOut('slow');
+
           $('.stream2 .card_para').toggle('slow');
-          $(".stream1").removeClass('highlight_stream');
-          $(".stream2").removeClass('highlight_stream');
-          $(".stream3").removeClass('highlight_stream');
+
           $(".stream2").addClass('highlight_stream');
-     }).mouseleave(function () { // start chaining
-          $(".stream2").removeClass('highlight_stream');
+          $(".stream1").removeClass('highlight_stream');
+          $(".stream3").removeClass('highlight_stream');
+          $(".stream4").removeClass('highlight_stream');
+          $(".stream5").removeClass('highlight_stream');
+          $(".stream6").removeClass('highlight_stream');
      });
 
+     // STREAM 3
      $('.stream3 .card_para').hide('slow');
-     $(".show3").on("click", function () {
+     $(".show3").on("click", function (event) {
+          event.preventDefault();
+          $('.stream3').fadeTo(1000, 1);
+          $('.stream2 .card_para').fadeOut('slow');
+          $('.stream1 .card_para').fadeOut('slow');
+          $('.stream4 .card_para').fadeOut('slow');
+          $('.stream5 .card_para').fadeOut('slow');
+          $('.stream6 .card_para').fadeOut('slow');
+
           $('.stream3 .card_para').toggle('slow');
-          $(".stream1").removeClass('highlight_stream');
-          $(".stream2").removeClass('highlight_stream');
-          $(".stream3").removeClass('highlight_stream');
+
           $(".stream3").addClass('highlight_stream');
-     }).mouseleave(function () { // start chaining
-          $(".stream3").removeClass('highlight_stream');
+          $(".stream2").removeClass('highlight_stream');
+          $(".stream1").removeClass('highlight_stream');
+          $(".stream4").removeClass('highlight_stream');
+          $(".stream5").removeClass('highlight_stream');
+          $(".stream6").removeClass('highlight_stream');
      });
+
+     // STREAM 4
+     $('.stream4 .card_para').hide('slow');
+     $(".show4").on("click", function (event) {
+          event.preventDefault();
+          $('.stream4').fadeTo(1000, 1);
+          $('.stream3 .card_para').fadeOut('slow');
+          $('.stream2 .card_para').fadeOut('slow');
+          $('.stream1 .card_para').fadeOut('slow');
+          $('.stream5 .card_para').fadeOut('slow');
+          $('.stream6 .card_para').fadeOut('slow');
+
+          $('.stream4 .card_para').toggle('slow');
+
+          $(".stream4").addClass('highlight_stream');
+          $(".stream3").removeClass('highlight_stream');
+          $(".stream2").removeClass('highlight_stream');
+          $(".stream1").removeClass('highlight_stream');
+          $(".stream5").removeClass('highlight_stream');
+          $(".stream6").removeClass('highlight_stream');
+     });
+
+     // STREAM 5
+     $('.stream5 .card_para').hide('slow');
+     $(".show5").on("click", function (event) {
+          event.preventDefault();
+          $('.stream5').fadeTo(1000, 1);
+          $('.stream4 .card_para').fadeOut('slow');
+          $('.stream3 .card_para').fadeOut('slow');
+          $('.stream2 .card_para').fadeOut('slow');
+          $('.stream1 .card_para').fadeOut('slow');
+          $('.stream6 .card_para').fadeOut('slow');
+
+          $('.stream5 .card_para').toggle('slow');
+
+          $(".stream5").addClass('highlight_stream');
+          $(".stream4").removeClass('highlight_stream');
+          $(".stream3").removeClass('highlight_stream');
+          $(".stream2").removeClass('highlight_stream');
+          $(".stream1").removeClass('highlight_stream');
+          $(".stream6").removeClass('highlight_stream');
+     });
+
+     
+     // STREAM 6
+     $('.stream6 .card_para').hide('slow');
+     $(".show6").on("click", function (event) {
+          event.preventDefault();
+          $('.stream6').fadeTo(1000, 1);
+          $('.stream5 .card_para').fadeOut('slow');
+          $('.stream4 .card_para').fadeOut('slow');
+          $('.stream3 .card_para').fadeOut('slow');
+          $('.stream2 .card_para').fadeOut('slow');
+          $('.stream1 .card_para').fadeOut('slow');
+
+          $('.stream6 .card_para').toggle('slow');
+
+          $(".stream6").addClass('highlight_stream');
+          $(".stream5").removeClass('highlight_stream');
+          $(".stream4").removeClass('highlight_stream');
+          $(".stream3").removeClass('highlight_stream');
+          $(".stream2").removeClass('highlight_stream');
+          $(".stream1").removeClass('highlight_stream');
+     });
+
 });
