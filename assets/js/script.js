@@ -14,6 +14,14 @@
  * 
 */
 
+/** Event listeners:
+ * mouseenter(function(){//effects})
+ * mouseleave(function(){//effects})
+ * hover(function(){//effects})
+ * click(function(){//effects})
+ * load(function(){//effects})  for images, iframes, and other elements loaded from external sources
+ */
+
 $(document).ready(function () {
 
      $('.stream1 .card_para').hide('slow');
