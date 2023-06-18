@@ -90,6 +90,10 @@ div {
 	background-color: #fff;
 }
 
+.no_text_decoration {
+	text-decoration: none;
+}
+
 .highlight_stream {
 	background-color: #eb52554d;
 }

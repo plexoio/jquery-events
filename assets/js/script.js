@@ -38,6 +38,15 @@
  */
 
 $(document).ready(function () {
+
+     // Navbar
+
+     $('.activate_now').click(function() {
+          $('#google').attr('href','https://www.google.com/');
+          $('#google').addClass('no_text_decoration');
+     });
+
+     // Settings for cards
      $('.card').fadeTo(1000, 0.5);
      // STREAM 1
      $('.stream1 .card_para').hide('slow');
